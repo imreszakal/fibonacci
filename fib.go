@@ -35,7 +35,7 @@ func fib(x, y float64, c int16, numbers []float64) {
 
 func printer(numbers []float64) {
     for i, v := range numbers {
-        if i < 3 || i > 1474 {
+        if i < 7 || i > 1474 {
             vs := strconv.FormatFloat(v, 'f', 0, 64)
             fmt.Printf("%d. fib: %.0f\n", i+1, v)
             fmt.Printf("Number of digits: %v\n\n", len(vs))
