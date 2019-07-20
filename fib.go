@@ -9,6 +9,7 @@ package main
 import (
     "fmt"
     "time"
+    "strconv"
 )
 
 // Output:
@@ -33,13 +34,11 @@ func fib(x, y float64, c int16, numbers []float64) {
 }
 
 func printer(numbers []float64) {
-    fmt.Printf("\n")
     for i, v := range numbers {
         if i < 3 || i > 1474 {
-            // vs := strconv.FormatFloat(v, 'f', 0, 64)
+            vs := strconv.FormatFloat(v, 'f', 0, 64)
             fmt.Printf("%d. fib: %.0f\n", i+1, v)
-            // fmt.Printf("Length: %v\n", len(vs))
-            fmt.Printf("\n")
+            fmt.Printf("Number of digits: %v\n\n", len(vs))
         }
     }
 }
@@ -53,7 +52,7 @@ func main() {
 
     fmt.Printf("\n")
     elapsed := time.Since(start)
-    fmt.Printf("Time: %v\n", elapsed)
+    fmt.Printf("Time: %v\n\n", elapsed)
 
     printer(numbers)
 }
