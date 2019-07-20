@@ -3,7 +3,7 @@
 //
 // fib.go
 // Calculates the biggest Fibonacci-number represented in float64
-
+//
 // Output:
 // Time: 230.97µs
 // 1. fib: 1
@@ -14,7 +14,9 @@
 // 6656713050982721611762517795273838124075551803079743968344369778569623080247
 // 3309617042775347304891963181519627287463521203531259388682404883801028462229
 // 3993455678848254649341365631154415844303003337887773454383151162230325185546
-// 81344package main
+// 81344
+
+package main
 
 import (
     "fmt"
@@ -48,7 +50,6 @@ func main() {
     fib(0, 1, 0, numbers)
     elapsed := time.Since(start)
 
-    fmt.Printf("\n")
-    fmt.Printf("Time: %v\n\n", elapsed)
+    fmt.Printf("\nTime: %v\n\n", elapsed)
     printer(numbers)
 }
