@@ -35,6 +35,7 @@ func printer(numbers []float64) {
     for i, v := range numbers {
         if i < 7 || i > 1474 {
             fmt.Printf("%d. fib: %.0f\n", i+1, v)
+
             vs := strconv.FormatFloat(v, 'f', 0, 64)
             fmt.Printf("Number of digits: %v\n\n", len(vs))
         }
@@ -43,14 +44,11 @@ func printer(numbers []float64) {
 
 func main() {
     start := time.Now()
-
     numbers := make([]float64, 1476, 1476)
-
     fib(0, 1, 0, numbers)
+    elapsed := time.Since(start)
 
     fmt.Printf("\n")
-    elapsed := time.Since(start)
     fmt.Printf("Time: %v\n\n", elapsed)
-
     printer(numbers)
 }
