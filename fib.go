@@ -4,14 +4,6 @@
 // fib.go
 // Calculates the biggest Fibonacci-number represented in float64
 
-package main
-
-import (
-    "fmt"
-    "time"
-    "strconv"
-)
-
 // Output:
 // Time: 230.97µs
 // 1. fib: 1
@@ -22,7 +14,13 @@ import (
 // 6656713050982721611762517795273838124075551803079743968344369778569623080247
 // 3309617042775347304891963181519627287463521203531259388682404883801028462229
 // 3993455678848254649341365631154415844303003337887773454383151162230325185546
-// 81344
+// 81344package main
+
+import (
+    "fmt"
+    "time"
+    "strconv"
+)
 
 func fib(x, y float64, c int16, numbers []float64) {
     numbers[c] = y
