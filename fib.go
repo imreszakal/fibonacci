@@ -24,14 +24,14 @@ import (
     "strconv"
 )
 
-func fib(x, y float64, c int16, numbers []float64) {
-    numbers[c] = y
-    c++
-    if c < 1476 {
-    // if y < 1.797693134862315708145274237317043567981e+308 {
-        fib(y, x+y, c, numbers)
+func fib(numbers []float64) {
+    var x, y float64 = 1, 1
+    for c := 0; c < 1476; c++ {
+        numbers[c] = x
+        x, y = y, x+y
     }
 }
+
 
 func printer(numbers []float64) {
     for i, v := range numbers {
@@ -47,7 +47,7 @@ func printer(numbers []float64) {
 func main() {
     start := time.Now()
     numbers := make([]float64, 1476, 1476)
-    fib(0, 1, 0, numbers)
+    fib(numbers)
     elapsed := time.Since(start)
 
     fmt.Printf("\nTime: %v\n\n", elapsed)
