@@ -5,7 +5,7 @@
 // Calculates the biggest Fibonacci-number represented in float64
 //
 // Output:
-// Time: 230.97µs
+// Time: 5.304µs
 // 1. fib: 1
 // 2. fib: 1
 // 3. fib: 2
